@@ -1,0 +1,45 @@
+.u-text--center {
+  text-align: center;
+}
+.marginBottom-big {
+  margin-bottom: 8rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 4rem;
+  }
+}
+.marginBottom-medium {
+  margin-bottom: 4rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 2rem;
+  }
+}
+.marginBottom-small {
+  margin-bottom: 2rem;
+}
+.margin-box {
+  margin: 16rem 0;
+
+  @include respond(tab-port) {
+    margin: 0;
+  }
+}
+.marginTop-big {
+  margin-top: 12rem;
+
+  @include respond(tab-port) {
+    margin-top: 8rem;
+  }
+}
+
+.marginTop-small {
+  margin-top: 4rem;
+
+  @include respond(tab-port) {
+    margin-top: 2rem;
+  }
+}
+.btn-text-color {
+  color: $color-white;
+}

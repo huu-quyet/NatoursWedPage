@@ -1,0 +1,41 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; // 1rem=10px
+  @include respond(desktop) {
+    // width < 1600px
+    font-size: 56.25%; //1rem= 9px
+  }
+
+  @include respond(tab-lad) {
+    // width < 1200px
+    font-size: 50%; //1rem= 8px
+  }
+
+  @include respond(tab-port) {
+    // width < 900px
+    font-size: 43.75%; // 1rem= 7px
+  }
+
+  @include respond(phone) {
+    // width < 600px
+    font-size: 37.5%; // 1rem= 6px
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem=12px
+  }
+}
+
+body {
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}

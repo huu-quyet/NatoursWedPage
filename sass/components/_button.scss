@@ -1,0 +1,105 @@
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.4rem 4.6rem;
+    display: inline-block;
+    border-radius: 10rem;
+    font-size: 2rem;
+    font-weight: 400;
+    position: relative;
+    transition: all 0.2s;
+  }
+
+  &--white {
+    color: $color-gray;
+    background-color: $color-white;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  &--green {
+    color: $color-white;
+    background-color: $color-main;
+
+    &::after {
+      background-color: $color-main;
+    }
+  }
+  &-book {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: $color-white;
+    font-weight: 400;
+    padding: 1.4rem 4rem;
+    border: 3px solid $color-main;
+    background-color: $color-main;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: all 0.4s;
+    z-index: -10;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: 2rem;
+    color: $color-main;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid $color-main;
+    padding: 6px 1px;
+    transition: all 0.2s;
+  }
+  &:hover {
+    color: $color-white;
+    background-color: $color-main;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    transform: translateY(-2px);
+  }
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    transform: translateY(0);
+  }
+}
+
+.tour--center {
+  text-align: center;
+  padding: 6rem 0 8rem;
+}

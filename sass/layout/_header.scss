@@ -1,0 +1,82 @@
+.header {
+  &__box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    &-heading {
+      color: $color-white;
+      text-transform: uppercase;
+      backface-visibility: hidden;
+      margin-bottom: 6rem;
+    }
+    &-heading--main {
+      display: block;
+      font-weight: 400;
+      font-size: 8rem;
+      letter-spacing: 3.5rem;
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+
+      @include respond(phone) {
+        letter-spacing: 1rem;
+      }
+    }
+
+    &-heading--sub {
+      display: block;
+      font-weight: 700;
+      font-size: 2.4rem;
+      letter-spacing: 2.15rem;
+      animation-name: moveInRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+
+      @include respond(phone) {
+        letter-spacing: 0.5rem;
+      }
+    }
+  }
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      ($color-main-light),
+      ($color-main-dark)
+    ),
+    url(../img/hero-small.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @media (min-resolution: 191dpi) and (min-width: 600px), (min-width: 2000px) {
+    background-image: linear-gradient(
+        to right bottom,
+        ($color-main-light),
+        ($color-main-dark)
+      ),
+      url(../img/hero.jpg);
+  }
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 85vh);
+    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 85vh);
+  }
+
+  &__logo {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &--logo {
+    height: 3.5rem;
+  }
+}
