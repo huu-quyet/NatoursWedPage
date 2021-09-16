@@ -29,6 +29,10 @@ body {
     body {
       padding: 0; } }
 
+::selection {
+  background-color: #55c57a;
+  color: #fff; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -648,7 +652,7 @@ body {
       font-size: 6rem;
       letter-spacing: 2px;
       margin: 0 0 6rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto; }
       .card__side {
